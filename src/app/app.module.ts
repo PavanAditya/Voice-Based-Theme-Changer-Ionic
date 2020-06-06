@@ -12,7 +12,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ServicesSpeechProvider } from '../providers/services-speech/services-speech';
 import { SpeechProvider } from '../providers/speech/speech';
 
 @NgModule({
