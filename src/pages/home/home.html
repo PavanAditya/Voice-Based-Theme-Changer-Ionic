@@ -1,28 +1,61 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Log In</ion-title>
+    <ion-title>Log In/Register</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding [style.background-color]="bgcolor">
-  <ion-card>
+  <ion-card *ngIf="loginDisplay">
     <ion-card-header>
-      Log in
+      Login
     </ion-card-header>
     <ion-card-content>
       <ion-item no-lines="">
         <ion-item>
-          <ion-input type="text" placeholder="UserName"></ion-input>
+          <ion-input type="text" placeholder="User Name"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="**************"></ion-input>
+          <ion-input type="password" placeholder="Password"></ion-input>
         </ion-item>
       </ion-item>
-      <button ion-button [block]="true" [round]="true" [outline]="true"> login</button>
-      <a>Forgot Password?</a>
-      <span><a>sign up</a></span>
+      <button ion-button [block]="true" [round]="true" [outline]="true" (click)="login()">Login</button>
+      <span style="text-decoration: underline; margin-right: 5px;"><a>Forgot Password?</a></span>
+      <span style="text-decoration: underline;"><a (click)="changeDisplayCard()">Signup</a></span>
       <ion-item>
-        <button ion-button [block]="true"><ion-icon name="logo-facebook" margin-end="4px"></ion-icon>login with facebook</button>
+        <button ion-button [block]="true" (click)="login()">
+          <ion-icon name="logo-facebook" margin-end="4px"></ion-icon>Login with facebook
+        </button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="!loginDisplay">
+    <ion-card-header>
+      Register
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item no-lines="">
+        <ion-item>
+          <ion-input type="text" placeholder="User Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Contact Number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <ion-input type="password" placeholder="Confirm Password"></ion-input>
+      </ion-item>
+      <button ion-button [block]="true" [round]="true" [outline]="true" (click)="register()">Register</button>
+      <span style="text-decoration: underline; margin-right: 5px;"><a>Forgot Password?</a></span>
+      <span style="text-decoration: underline;"><a (click)="changeDisplayCard()">Signin</a></span>
+      <ion-item>
+        Feeling Lazy to enter your details?
+        <button ion-button [block]="true" (click)="register()">
+          <ion-icon name="logo-facebook" margin-end="4px"></ion-icon>Signup with facebook
+        </button>
       </ion-item>
     </ion-card-content>
   </ion-card>

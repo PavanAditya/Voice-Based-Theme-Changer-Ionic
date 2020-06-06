@@ -1,19 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Themes
+      Settings
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding [style.background-color] ="bgcolor">
+<ion-content padding [style.background-color]="bgcolor">
   <ion-card padding="16px">
     <ion-card-header> How to change your theme</ion-card-header>
     <ion-card-content>
-      your can change the app color background to color of your choice.
-      <p>1. click on the button below and say a color. </p>
+      Change your color with
+      <p>1. Click on the button below and say a color. </p>
       <p>2. The color will change immediately</p>
     </ion-card-content>
     <ion-item-divider></ion-item-divider>
   </ion-card>
-  <button ion-button full (click)="start()">Say a color to change theme</button>
+  <span>Change Theme</span>&nbsp;&nbsp;<button ion-button full (click)="start()">
+    <ion-icon ios="ios-color-fill" md="md-color-fill"></ion-icon>
+  </button>
+  <ion-card padding="16px" *ngIf="matches && matches[0]" style="background-color: rgba(219, 219, 219, 0.527);">
+    <ion-card-header>Theme changed to: <span [style.color]="bgcolor">{{ matches[0] }}</span></ion-card-header>
+    <ion-item-divider></ion-item-divider>
+  </ion-card>
 </ion-content>

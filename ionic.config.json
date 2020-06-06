@@ -1,5 +1,5 @@
 {
-  "name": "I_hear_you",
+  "name": "Voice Recognition",
   "integrations": {
     "cordova": {}
   },

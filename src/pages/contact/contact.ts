@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {SpeechRecognition} from "@ionic-native/speech-recognition";
+import { SpeechRecognition } from "@ionic-native/speech-recognition";
+import { SpeechProvider } from '../../providers/speech/speech';
 
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-  bgcolor: string='white';
+  public bgcolor: string = 'white';
 
-  constructor(public navCtrl: NavController, private speechRecognition:SpeechRecognition) {
-
-  }
+  constructor(
+    public navCtrl: NavController,
+    private speechRecognition: SpeechRecognition,
+    private speechService: SpeechProvider
+  ) { }
   ngOnInit() {
     this.speechRecognition.hasPermission()
       .then((hasPermission: boolean) => {
@@ -24,15 +27,23 @@ export class ContactPage {
             )
         }
       });
+    this.speechService.bgColor.next(this.bgcolor);
+    this.speechService.bgColor.subscribe(resp => {
+      this.bgcolor = resp;
+    });
   }
-  start(){
+  public start(): void {
     this.speechRecognition.startListening()
-      .subscribe(
-        (matches: Array<string>) =>{
-          console.log('matches')
-          this.bgcolor = matches[0];
-        }
-      )}
+      .subscribe((matches: Array<string>) => {
+        console.log('matches')
+        this.bgcolor = matches[0];
+        this.speechService.bgColor.next(this.bgcolor);
+      }
+      )
+  }
 
+  public roomClicked(house: string, room: string): void {
+    alert(`${house} has ${room}`);
+  }
 
 }

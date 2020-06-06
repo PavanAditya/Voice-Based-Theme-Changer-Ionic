@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>I_hear_you</name>
-    <description>An awesome Ionic/Cordova app to test speech recognition native plugin</description>
-    <author email="benedictephantus@gmail.com" href="#">reach me out</author>
+    <name>Voice Recognition</name>
+    <description>A Voice recognition app used for recognizing speech with usesage of npm @ionic-native/speech-recognition package.</description>
+    <author email="pavanaditya.ms@gmail.com" href="#">Reach me out</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

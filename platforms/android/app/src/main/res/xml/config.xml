@@ -21,9 +21,9 @@
         <param name="android-package" value="com.wordsbaking.cordova.tts.TTS" />
         <param name="onload" value="true" />
     </feature>
-    <name>I_hear_you</name>
-    <description>An awesome Ionic/Cordova app to test speech recognition native plugin</description>
-    <author email="benedictephantus@gmail.com" href="#">reach me out</author>
+    <name>Voice Recognition</name>
+    <description>A Voice recognition app used for recognizing speech with usesage of npm @ionic-native/speech-recognition package.</description>
+    <author email="pavanaditya.ms@gmail.com" href="#">Reach me out</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
