@@ -63,4 +63,4 @@ Running E2E Tests
 
 $ npm run e2e
 
-## Pavan Aditya M S
+## [Pavan Aditya M S](https://pavanaditya.com)
