@@ -38,12 +38,12 @@
   </button>
   <ion-card padding="16px" *ngIf="matches && matches[0] && matches[0] !== 'black'"
     style="background-color: rgba(0, 0, 0, 0.5);">
-    <ion-card-header>Theme changed to: <span style="text-transform: capitalize; font-size: 20px;"
-        [style.color]="bgcolor"><b><i>{{ matches[0] }}</i></b></span></ion-card-header>
+    <ion-card-content>You Said:<br /> <span style="text-transform: capitalize; font-size: 20px;"
+        [style.color]="bgcolor"><b><i>{{ matches[0] }}</i></b></span></ion-card-content>
   </ion-card>
   <ion-card padding="16px" *ngIf="matches && matches[0] && matches[0] === 'black'"
     style="background-color: rgba(255, 255, 255, 0.5);">
-    <ion-card-header>Theme changed to: <span style="text-transform: capitalize; font-size: 20px;"
-        [style.color]="bgcolor"><b><i>{{ matches[0] }}</i></b></span></ion-card-header>
+    <ion-card-content>You Said:<br /> <span style="text-transform: capitalize; font-size: 20px;"
+        [style.color]="bgcolor"><b><i>{{ matches[0] }}</i></b></span></ion-card-content>
   </ion-card>
 </ion-content>
