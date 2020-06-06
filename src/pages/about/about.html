@@ -32,18 +32,18 @@
       <p style="color: white;">2. The color will change immediately</p>
     </ion-card-content>
   </ion-card>
-  <button ion-button full style="height: 10px;" (click)="start()">
+  <button ion-button full style="font-size: 20px;" (click)="start()">
     <!-- <span style="color: white;">Change Theme</span>&nbsp;&nbsp; -->
     <ion-icon ios="ios-color-fill" md="md-color-fill"></ion-icon>
   </button>
   <ion-card padding="16px" *ngIf="matches && matches[0] && matches[0] !== 'black'"
     style="background-color: rgba(0, 0, 0, 0.5);">
-    <ion-card-header>Theme changed to: <span style="text-transform: capitalize;"
-        [style.color]="bgcolor">{{ matches[0] }}</span></ion-card-header>
+    <ion-card-header>Theme changed to: <span style="text-transform: capitalize; font-size: 16px;"
+        [style.color]="bgcolor"><b><i>{{ matches[0] }}</i></b>}</span></ion-card-header>
   </ion-card>
   <ion-card padding="16px" *ngIf="matches && matches[0] && matches[0] === 'black'"
     style="background-color: rgba(255, 255, 255, 0.5);">
-    <ion-card-header>Theme changed to: <span style="text-transform: capitalize;"
-        [style.color]="bgcolor">{{ matches[0] }}</span></ion-card-header>
+    <ion-card-header>Theme changed to: <span style="text-transform: capitalize; font-size: 16px;"
+        [style.color]="bgcolor"><b><i>{{ matches[0] }}</i></b></span></ion-card-header>
   </ion-card>
 </ion-content>
