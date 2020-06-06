@@ -46,6 +46,12 @@ export class HomePage {
     this.loginDisplay = !this.loginDisplay;
   }
 
+  public forgotPassword(): void {
+    alert(`No Help will be done.
+    Try Remembring Passwords
+    😆😆`);
+  }
+
   public login(): void {
     alert('Temporary Login');
   }

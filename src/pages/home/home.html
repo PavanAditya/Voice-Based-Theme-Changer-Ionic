@@ -19,7 +19,8 @@
         </ion-item>
       </ion-item>
       <button ion-button [block]="true" [round]="true" [outline]="true" (click)="login()">Login</button>
-      <span style="text-decoration: underline; margin-right: 5px;"><a>Forgot Password?</a></span>
+      <span style="text-decoration: underline; margin-right: 5px;"><a (click)="forgotPassword()">Forgot
+          Password?</a></span>
       <span style="text-decoration: underline;"><a (click)="changeDisplayCard()">Signup</a></span>
       <ion-item>
         <button ion-button [block]="true" (click)="login()">
@@ -51,7 +52,6 @@
         </ion-item>
       </ion-item>
       <button ion-button [block]="true" [round]="true" [outline]="true" (click)="register()">Register</button>
-      <span style="text-decoration: underline; margin-right: 5px;"><a>Forgot Password?</a></span>
       <span style="text-decoration: underline;"><a (click)="changeDisplayCard()">Signin</a></span>
       <ion-item>
         Feeling Lazy to enter your details?

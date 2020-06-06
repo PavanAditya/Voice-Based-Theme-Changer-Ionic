@@ -6,6 +6,14 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding [style.background-color]="bgcolor">
+  <ion-card padding="16px" *ngIf="!matches || !matches[0]">
+    <ion-card-header> How to change your theme</ion-card-header>
+    <ion-card-content>
+      Change your color with
+      <p>1. Click on the button below and say a color. </p>
+      <p>2. The color will change immediately</p>
+    </ion-card-content>
+  </ion-card>
   <ion-card padding="16px" *ngIf="matches && matches[0] && matches[0] !== 'black'"
     style="background-color: rgba(0, 0, 0, 0.5);">
     <ion-card-header> How to change your theme</ion-card-header>
@@ -20,11 +28,11 @@
     <ion-card-header style="color: white;"> How to change your theme</ion-card-header>
     <ion-card-content style="color: white;">
       Change your color with
-      <p>1. Click on the button below and say a color. </p>
-      <p>2. The color will change immediately</p>
+      <p style="color: white;">1. Click on the button below and say a color. </p>
+      <p style="color: white;">2. The color will change immediately</p>
     </ion-card-content>
   </ion-card>
-  <button ion-button full (click)="start()">
+  <button ion-button full style="height: 10px;" (click)="start()">
     <!-- <span style="color: white;">Change Theme</span>&nbsp;&nbsp; -->
     <ion-icon ios="ios-color-fill" md="md-color-fill"></ion-icon>
   </button>
