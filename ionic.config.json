@@ -1,0 +1,7 @@
+{
+  "name": "I_hear_you",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
